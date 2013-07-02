@@ -24,9 +24,23 @@ function findPrimes(arrayFoundPrimes, limit)
 	return arrayFoundPrimes;
 }
 
+// finding the first 100 primes with the above funtion. 
+// and I know, this is freaking ugly. But I am too lazy =(
+function find100Primes(){
+	var primes = [];
+	var current = 0;
+	while(primes.length<100)
+	{
+		primes = [];
+		current = current + 1;
+		findPrimes(primes, current);
+	}
+	return primes;
+}
+
 var test;
 
-test = findPrimes(test, 100);
+test = find100Primes();
 
 var fs = require('fs');
 var outfile = "hmwk-01-02.txt";
